@@ -1,3 +1,170 @@
-.container {
-  border: 2px solid black;
+/* == Mixins == */
+
+// Mixin For Responsive Text https://eduardoboucas.com/blog/2015/06/18/viewport-sized-typography-with-minimum-and-maximum-sizes.html
+@mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
+  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
+  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+  $min-breakpoint: $min / $responsive-unitless * 100;
+
+  @media (max-#{$dimension}: #{$min-breakpoint}) {
+    font-size: $min;
+  }
+
+  @if $max {
+    $max-breakpoint: $max / $responsive-unitless * 100;
+
+    @media (min-#{$dimension}: #{$max-breakpoint}) {
+      font-size: $max;
+    }
+  }
+
+  @if $fallback {
+    font-size: $fallback;
+  }
+
+  font-size: $responsive;
 }
+
+/* == Variables == */
+
+$color-blue: #02b3e4;
+$color-dark: #2d3c49;
+$color-grey: #7d97ad;
+
+
+/* == Custom Styles == */
+
+/* == Header == */
+
+body {
+	margin-top: 5vw;
+}
+
+
+h1,h2 {
+	font-family: 'Lato', sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	
+}
+
+
+h1 {
+	@include responsive-font(4vw, 20px);
+	letter-spacing: 2px;
+	font-weight: 300;
+}
+
+h2 {
+	@include responsive-font(2vw,16px);
+}
+
+svg#logo-svg {
+	margin: 5% auto;
+	max-width: 25%;
+	display: block;
+	min-width: 100px;
+}
+
+hr {
+	max-width: 100%;
+	border-top: 3px solid $color-dark;
+}
+
+/* == Featured Work == */
+
+h3 {
+	text-transform: capitalize;
+	letter-spacing: 0;
+	@include responsive-font(2vw,16px);
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.featured-img {
+	width: 80vw;
+	margin: 10px 0;
+	overflow: hidden;
+	
+	img {
+		max-width: 100%;
+	}
+
+	h4 {
+		text-transform: uppercase;
+		text-align: center;
+		font-family: 'Lato';
+		font-weight: 300;
+		letter-spacing: 1.4px;   
+	}
+}
+
+
+
+/* == Footer == */
+
+footer {
+	width: 100%;
+	margin-top: 10vw;
+	background: rgba(76,76,76,1);
+	background: -moz-linear-gradient(left, rgba(76,76,76,1) 0%, rgba(58,58,58,1) 23%, rgba(22,22,22,1) 68%, rgba(0,0,0,1) 95%, rgba(19,19,19,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(76,76,76,1)), color-stop(23%, rgba(58,58,58,1)), color-stop(68%, rgba(22,22,22,1)), color-stop(95%, rgba(0,0,0,1)), color-stop(100%, rgba(19,19,19,1)));
+	background: -webkit-linear-gradient(left, rgba(76,76,76,1) 0%, rgba(58,58,58,1) 23%, rgba(22,22,22,1) 68%, rgba(0,0,0,1) 95%, rgba(19,19,19,1) 100%);
+	background: -o-linear-gradient(left, rgba(76,76,76,1) 0%, rgba(58,58,58,1) 23%, rgba(22,22,22,1) 68%, rgba(0,0,0,1) 95%, rgba(19,19,19,1) 100%);
+	background: -ms-linear-gradient(left, rgba(76,76,76,1) 0%, rgba(58,58,58,1) 23%, rgba(22,22,22,1) 68%, rgba(0,0,0,1) 95%, rgba(19,19,19,1) 100%);
+	background: linear-gradient(to right, rgba(76,76,76,1) 0%, rgba(58,58,58,1) 23%, rgba(22,22,22,1) 68%, rgba(0,0,0,1) 95%, rgba(19,19,19,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 );
+	
+}
+
+.social-icons {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	i.fa {
+		display: inline-block;
+		font-size: 4em;
+		color: #fff;
+		padding: 20px;
+	}
+}
+
+/* == Media Queries == */
+
+@media screen and (min-width: 768px) {
+	svg#logo-svg {
+		margin: 5% 0;
+		max-width: 35%;
+	}
+
+	h1,h2 {
+		text-align: right;
+	}
+
+	h3 {
+		text-align: left;
+		margin: 20px 15px !important;
+	}
+
+	/* == Featured Work == */
+	
+	.gallery {
+		justify-content: space-between;
+	}
+
+	.featured-img {
+		max-width: 30%;
+	}
+}
+
+
+
+
+

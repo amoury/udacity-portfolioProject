@@ -1,5 +1,135 @@
-.container {
-  border: 2px solid black;
+/* == Mixins == */
+/* == Variables == */
+/* == Custom Styles == */
+/* == Header == */
+body {
+  margin-top: 5vw;
+}
+
+h1, h2 {
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4vw;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 20px;
+  }
+}
+
+h2 {
+  font-size: 2vw;
+}
+@media (max-width: 800px) {
+  h2 {
+    font-size: 16px;
+  }
+}
+
+svg#logo-svg {
+  margin: 5% auto;
+  max-width: 25%;
+  display: block;
+  min-width: 100px;
+}
+
+hr {
+  max-width: 100%;
+  border-top: 3px solid #2d3c49;
+}
+
+/* == Featured Work == */
+h3 {
+  text-transform: capitalize;
+  letter-spacing: 0;
+  font-size: 2vw;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+@media (max-width: 800px) {
+  h3 {
+    font-size: 16px;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.featured-img {
+  width: 80vw;
+  margin: 10px 0;
+  overflow: hidden;
+}
+.featured-img img {
+  max-width: 100%;
+}
+.featured-img h4 {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Lato';
+  font-weight: 300;
+  letter-spacing: 1.4px;
+}
+
+/* == Footer == */
+footer {
+  width: 100%;
+  margin-top: 10vw;
+  background: #4c4c4c;
+  background: -moz-linear-gradient(left, #4c4c4c 0%, #3a3a3a 23%, #161616 68%, black 95%, #131313 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #4c4c4c), color-stop(23%, #3a3a3a), color-stop(68%, #161616), color-stop(95%, black), color-stop(100%, #131313));
+  background: -webkit-linear-gradient(left, #4c4c4c 0%, #3a3a3a 23%, #161616 68%, black 95%, #131313 100%);
+  background: -o-linear-gradient(left, #4c4c4c 0%, #3a3a3a 23%, #161616 68%, black 95%, #131313 100%);
+  background: -ms-linear-gradient(left, #4c4c4c 0%, #3a3a3a 23%, #161616 68%, black 95%, #131313 100%);
+  background: linear-gradient(to right, #4c4c4c 0%, #3a3a3a 23%, #161616 68%, black 95%, #131313 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 );
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.social-icons i.fa {
+  display: inline-block;
+  font-size: 4em;
+  color: #fff;
+  padding: 20px;
+}
+
+/* == Media Queries == */
+@media screen and (min-width: 768px) {
+  svg#logo-svg {
+    margin: 5% 0;
+    max-width: 35%;
+  }
+
+  h1, h2 {
+    text-align: right;
+  }
+
+  h3 {
+    text-align: left;
+    margin: 20px 15px !important;
+  }
+
+  /* == Featured Work == */
+  .gallery {
+    justify-content: space-between;
+  }
+
+  .featured-img {
+    max-width: 30%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

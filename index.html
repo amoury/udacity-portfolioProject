@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="css/normalize.min.css">
 
         <!-- GOOGLE FONTS -->
-        <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Open+Sans" rel="stylesheet">
 
         <!-- Font Awesome -->
         <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -30,17 +30,80 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-    <header>
-        <div class="container">
+    <div class="container">
+        <header>
             <div class="row">
-                <div class="col-md-4 main-logo"></div>
-                <div class="col-md-8">
-                    <h1 class="text-right">Ansar Memon</h1>
-                    <h2 class="text-right">Full Stack Developer</h2>
+                <div class="col-xs-12 col-sm-6 main-logo">
+                    <svg id="logo-svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 108.92 78.83">
+                      <defs>
+                        <linearGradient id="1f76a85c-9119-42c5-b43c-6b05682aecc8" data-name="White, Black" y1="43.03" x2="82.68" y2="43.03" gradientUnits="userSpaceOnUse">
+                          <stop offset="0" stop-color="#fff"/>
+                          <stop offset="1"/>
+                        </linearGradient>
+                      </defs>
+                      <title>logo[1.0]</title>
+                      <polygon points="41.34 7.22 82.68 78.83 0 78.83 41.34 7.22" style="fill: url(#1f76a85c-9119-42c5-b43c-6b05682aecc8)"/>
+                      <path d="M102.21,80.65" transform="translate(-32.89 -20.95)" style="fill: none;stroke: aqua;stroke-miterlimit: 10;stroke-width: 0.5px"/>
+                      <path d="M88.22,80.65" transform="translate(-32.89 -20.95)" style="fill: none;stroke: aqua;stroke-miterlimit: 10;stroke-width: 0.5px"/>
+                      <polygon points="63.41 0 108.92 78.83 17.9 78.83 63.41 0" style="opacity: 0.8"/>
+                    </svg>
+                </div><!--  /.main-logo -->
+                <div class="col-xs-12 col-sm-6">
+                    <h1>Ansar Memon</h1>
+                    <h2>Full Stack Developer</h2>
                  </div>
             </div>
+            <hr>
+        </header>
+
+        <section id="main-section">
+            <img src="images/img-1-800_small_2x.jpg" alt="" srcset="images/img-1-800_small_2x.jpg 400w, images/img-1-1600_large_2x.jpg 800w" sizes="50%" class="img-responsive">
+        </section>
+
+        <section id="featured-work">
+            <div class="row">
+                <h3>Featured Work</h3>
+            </div>
+
+            <div class="row gallery">
+                <div class="featured-img">
+                    <img src="images/img-2-800_small_2x.jpg" 
+                         alt="Very Cool Tech Image"
+                         sizes="(max-width: 400px) 100vw, (min-width: 401px) 33vw"
+                         srcset="images/img-2-800_small_2x.jpg 400w, images/img-2-1600_large_2x.jpg 800w" >
+                    <h4>Google Analytics</h4>
+                    <p class="text-center">Checkout how I can help you with Google Analytics <a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
+                </div>
+                <div class="featured-img">
+                    <img src="images/img-1-800_small_2x.jpg" 
+                         alt="Very Cool Tech Image"
+                         sizes="(max-width: 400px) 100vw, (min-width: 401px) 33vw"
+                         srcset="images/img-1-800_small_2x.jpg 400w, images/img-1-1600_large_2x.jpg 800w" >
+                    <h4>Photographer's tools</h4>
+                    <p class="text-center">I can help you take awesome pictures <a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
+                </div>
+                <div class="featured-img">
+                    <img src="images/img-4-800_small_2x.jpg" 
+                         alt="Very Cool Tech Image"
+                         sizes="(max-width: 400px) 100vw, (min-width: 401px) 33vw"
+                         srcset="images/img-4-800_small_2x.jpg 400w, images/img-4-1600_large_2x.jpg 800w" >
+                    <h4>Web Developer's tools</h4>
+                    <p class="text-center">Get in touch if you need help with your website <a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
+                </div>
+            </div>
+        </section>
+        
+    </div><!-- / .container -->
+
+    <footer>
+        <div class="social-icons">
+            <a href="facebook.com"><i class="fa fa-facebook"></i></a>
+            <a href="twitter.com"><i class="fa fa-twitter"></i></a>
+            <a href="github.com"><i class="fa fa-github"></i></a>
         </div>
-    </header>
+    </footer>
+
+    
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>

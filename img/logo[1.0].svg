@@ -1,0 +1,13 @@
+<svg id="c10291ed-cc19-48d5-a591-7758c7374804" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 108.92 78.83">
+  <defs>
+    <linearGradient id="1f76a85c-9119-42c5-b43c-6b05682aecc8" data-name="White, Black" y1="43.03" x2="82.68" y2="43.03" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1"/>
+    </linearGradient>
+  </defs>
+  <title>logo[1.0]</title>
+  <polygon points="41.34 7.22 82.68 78.83 0 78.83 41.34 7.22" style="fill: url(#1f76a85c-9119-42c5-b43c-6b05682aecc8)"/>
+  <path d="M102.21,80.65" transform="translate(-32.89 -20.95)" style="fill: none;stroke: aqua;stroke-miterlimit: 10;stroke-width: 0.5px"/>
+  <path d="M88.22,80.65" transform="translate(-32.89 -20.95)" style="fill: none;stroke: aqua;stroke-miterlimit: 10;stroke-width: 0.5px"/>
+  <polygon points="63.41 0 108.92 78.83 17.9 78.83 63.41 0" style="opacity: 0.8"/>
+</svg>
